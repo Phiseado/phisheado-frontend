@@ -1,0 +1,11 @@
+.p-menubar-root-list {
+  width: 100%;
+}
+
+.p-menuitem.right-start {
+  margin-left: auto;
+}
+
+.p-menubar {
+    border-radius: 0px;
+}
