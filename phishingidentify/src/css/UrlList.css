@@ -3,14 +3,13 @@
   color: black !important;
 }
 
-.p-panel-urllist {
-  width: 100%;
-  height: calc(100vh - 90px);
-}
-
 .p-toggleable-content {
   height: calc(100% - 50px);
   overflow: auto;
+}
+
+.p-panel-urllist {
+  height: 100%;
 }
 
 .p-panel-content,
@@ -32,4 +31,12 @@
   background-color: #c28fc5 !important;
   border-color: #c07dc4 !important;
   color: black !important;
+}
+
+.grid {
+  margin: 0px !important;
+}
+
+.grid > div {
+  padding: 0px !important;
 }

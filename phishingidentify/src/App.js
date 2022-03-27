@@ -8,19 +8,13 @@ function App() {
   return (
     <div className='App'>
       <HeaderBar />
-      <div className="grid">
-        <div className="col-5">
+      <div className="grid p-grid-overall">
+        <div className="col-5 p-urllist-component">
           <UrlList />
         </div>
-        <div className="col-7">
-          <div className="grid">
-            <div className="col-12">
-              <Statistics />
-            </div>
-            <div className="col-12">
-              <InputMessage />
-            </div>
-          </div>
+        <div className="col-7 p-right-component">
+          <Statistics />
+          <InputMessage />
         </div>
       </div>
     </div>

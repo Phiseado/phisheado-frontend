@@ -25,7 +25,7 @@ const UrlList = () => {
     return (
         <Panel header="URL's consideradas como phishing" className="p-panel-urllist pl-3">
             <div className="card">
-                <DataScroller ref={datascroller} value={urls} itemTemplate={UrlCard} rows={5}
+                <DataScroller ref={datascroller} value={urls} itemTemplate={UrlCard} rows={6}
                     loader footer={footer} />
             </div>
         </Panel>

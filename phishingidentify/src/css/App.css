@@ -1,0 +1,13 @@
+.p-grid-overall {
+    height: calc(100vh - 90px);
+}
+
+.p-urllist-component {
+    height: 100%;
+}
+
+.p-right-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
