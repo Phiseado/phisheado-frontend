@@ -10,7 +10,7 @@ const InputMessage = () => {
         <Panel header="Inserte un texto con URL para analizar" className="px-3 p-input-text-area">
             <div className="flex flex-column">
                 <InputTextarea className="mb-3" value={inputMessage} onChange={(e) => setInputMessage(e.target.value)} rows={7} cols={110} />
-                <Button className="p-button-raised w-2 m-auto" label="Analizar" icon="pi pi-search" />
+                <Button className="p-button-raised m-auto" label="Analizar" icon="pi pi-search" />
             </div>
         </Panel>
     )

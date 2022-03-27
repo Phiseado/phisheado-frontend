@@ -21,7 +21,6 @@ function App() {
               <InputMessage />
             </div>
           </div>
-
         </div>
       </div>
     </div>

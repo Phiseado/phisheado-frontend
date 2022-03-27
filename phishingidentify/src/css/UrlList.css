@@ -1,5 +1,5 @@
 .p-card-body {
-  background-color: rgb(228, 228, 240) !important;
+  background-color: #e4e4f0 !important;
   color: black !important;
 }
 
@@ -13,7 +13,23 @@
   overflow: auto;
 }
 
+.p-panel-content,
+.p-card {
+  background-color: #304961 !important;
+  box-shadow: none !important;
+}
+
+.p-datascroller-footer {
+  background-color: #304961 !important;
+}
+
 .p-panel-header {
   display: flex;
   justify-content: center !important;
+}
+
+.p-button {
+  background-color: #c28fc5 !important;
+  border-color: #c07dc4 !important;
+  color: black !important;
 }
