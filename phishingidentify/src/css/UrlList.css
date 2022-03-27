@@ -3,8 +3,8 @@
   color: black !important;
 }
 
-.p-panel {
-  width: 40%;
+.p-panel-urllist {
+  width: 100%;
   height: calc(100vh - 90px);
 }
 
@@ -14,6 +14,6 @@
 }
 
 .p-panel-header {
-    display: flex;
-    justify-content: center !important;
+  display: flex;
+  justify-content: center !important;
 }

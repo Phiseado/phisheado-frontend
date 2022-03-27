@@ -17,7 +17,7 @@ const UrlCard = ({ domain, frequency, country }) => {
 
 const UrlList = () => {
     return (
-        <Panel header="URL's consideradas como phishing" className="pl-3">
+        <Panel header="URL's consideradas como phishing" className="p-panel-urllist pl-3">
             {urls.map((urlsProps) => (
                 <UrlCard {...urlsProps}></UrlCard>
             ))}
