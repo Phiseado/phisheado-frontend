@@ -1,0 +1,34 @@
+.p-card-urllist .p-card-body {
+  background-color: #e4e4f0 !important;
+  color: black !important;
+}
+
+.p-panel-urllist {
+  height: 100%;
+  width: 100%;
+  padding-right: 15px !important;
+}
+
+.p-panel-content,
+.p-card-urllist {
+  box-shadow: none !important;
+  width: 100%;
+}
+
+.p-panel-header {
+  display: flex;
+  justify-content: center !important;
+}
+
+.p-datascroller-footer {
+  background-color: #ffffff !important;
+  border: none !important;
+}
+
+.grid {
+  margin: 0px !important;
+}
+
+.grid > div {
+  padding: 0px !important;
+}

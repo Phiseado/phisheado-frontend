@@ -1,0 +1,4 @@
+.p-left-menu {
+    position: fixed !important;
+    background-color: var(--blue-900) !important;
+}

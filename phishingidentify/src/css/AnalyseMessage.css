@@ -1,0 +1,14 @@
+.p-inputtextarea {
+  background-color: var(--blue-50) !important;
+  color: #000000 !important;
+}
+
+.p-panel-header {
+  background-color: var(--blue-700) !important;
+  color: white !important;
+}
+
+.p-button-custom {
+  background-color: var(--blue-700) !important;
+  border-color: var(--blue-700) !important;
+}
