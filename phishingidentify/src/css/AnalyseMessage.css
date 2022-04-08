@@ -3,6 +3,19 @@
   color: #000000 !important;
 }
 
+.p-result-panel {
+  width: 70%;
+  height: 40%;
+}
+
+.p-result-panel.red .p-panel-content {
+  color: red !important;
+}
+
+.p-result-panel.green .p-panel-content {
+  color: green !important;
+}
+
 .p-panel-header {
   background-color: var(--blue-700) !important;
   color: white !important;
