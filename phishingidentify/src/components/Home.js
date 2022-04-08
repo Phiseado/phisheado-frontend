@@ -11,7 +11,7 @@ const Home = () => {
             <span className="text-5xl mt-4">Phishing alert</span>
             <span>"Insertar eslogan"</span>
             <div className="flex mt-7">
-                <Card className="mr-6 pb-4 p-container text-center p-card-home">
+                <Card className="mr-6 mb-4 p-container text-center p-card-home">
                     <img className="p-image" alt="analyse" src="analyse.png" height="100"></img>
                     <div className="p-overlay" onClick={() => {
                         localStorage.setItem("currentLocation", "analyse")
@@ -20,7 +20,7 @@ const Home = () => {
                         <div className="p-text">Analizar</div>
                     </div>
                 </Card>
-                <Card className="mr-6 p-container text-center p-card-home">
+                <Card className="mr-6 mb-4 p-container text-center p-card-home">
                     <img className="p-image" alt="analyse" src="statistics.png" height="100"></img>
                     <div className="p-overlay" onClick={() => {
                         localStorage.setItem("currentLocation", "statistics")
@@ -29,13 +29,13 @@ const Home = () => {
                         <div className="p-text">Estadísticas</div>
                     </div>
                 </Card>
-                <Card className="mr-6 p-container text-center p-card-home">
+                <Card className="mr-6 mb-4 p-container text-center p-card-home">
                     <img className="p-image" alt="analyse" src="information.png" height="100"></img>
                     <div className="p-overlay">
                         <div className="p-text">Información</div>
                     </div>
                 </Card>
-                <Card className="mr-6 p-container text-center p-card-home">
+                <Card className="mr-6 mb-4 p-container text-center p-card-home">
                     <img className="p-image" alt="analyse" src="contact.png" height="100"></img>
                     <div className="p-overlay">
                         <div className="p-text">Conócenos</div>
