@@ -1,0 +1,35 @@
+.p-c-splitter {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.p-panel-urllist {
+  height: 100%;
+  width: 100%;
+}
+
+.p-card-urllist .p-card-body {
+  background-color: var(--blue-50) !important;
+  border: 1px solid #ced4da !important;
+  color: black !important;
+}
+
+.p-panel-content,
+.p-card-urllist {
+  box-shadow: none !important;
+  width: 100%;
+}
+
+.p-toggleable-content {
+  overflow-y: auto;
+  height: calc(100% - 75px) !important;
+}
+
+.p-panel-header {
+  justify-content: center !important;
+}
+
+.p-datascroller-footer {
+  background-color: #ffffff !important;
+  border: none !important;
+}
