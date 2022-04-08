@@ -9,7 +9,7 @@ import { Splitter, SplitterPanel } from 'primereact/splitter';
 
 const UrlCard = (data) => {
     return (
-        <Card className="pb-3 p-card-urllist">
+        <Card className="p-card-urllist">
             <div className="flex flex-column">
                 <span><strong>Dominio:</strong> {data.domain}</span>
                 <span><strong>Frecuencia de aparición:</strong> {data.frequency}</span>
@@ -21,12 +21,12 @@ const UrlCard = (data) => {
 
 const Statistics = () => {
     const datascroller = useRef(null);
-    const footer = <Button className="p-button-custom" type="text" icon="pi pi-plus" label="Cargar" onClick={() => datascroller.current.load()} />
+    const footer = <Button className="p-button-custom mb-3" type="text" icon="pi pi-plus" label="Cargar" onClick={() => datascroller.current.load()} />
 
     return (
-        <Splitter className="mb-5">
+        <Splitter className="p-c-splitter">
             <SplitterPanel className="flex align-items-center justify-content-center">
-                <Panel header="URL's consideradas como phishing" className="p-panel-urllist pl-3">
+                <Panel header="URL's consideradas como phishing" className="p-panel-urllist px-3 pt-3">
                     <div className="card">
                         <DataScroller ref={datascroller} value={urls} itemTemplate={UrlCard} rows={3}
                             loader footer={footer} />

@@ -1,12 +1,17 @@
-.p-card-urllist .p-card-body {
-  background-color: #e4e4f0 !important;
-  color: black !important;
+.p-c-splitter {
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .p-panel-urllist {
   height: 100%;
   width: 100%;
-  padding-right: 15px !important;
+}
+
+.p-card-urllist .p-card-body {
+  background-color: var(--blue-50) !important;
+  border: 1px solid #ced4da !important;
+  color: black !important;
 }
 
 .p-panel-content,
@@ -15,20 +20,16 @@
   width: 100%;
 }
 
+.p-toggleable-content {
+  overflow-y: auto;
+  height: calc(100% - 75px) !important;
+}
+
 .p-panel-header {
-  display: flex;
   justify-content: center !important;
 }
 
 .p-datascroller-footer {
   background-color: #ffffff !important;
   border: none !important;
-}
-
-.grid {
-  margin: 0px !important;
-}
-
-.grid > div {
-  padding: 0px !important;
 }

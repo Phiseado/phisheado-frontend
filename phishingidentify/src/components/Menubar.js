@@ -9,6 +9,8 @@ const Menubar = () => {
 
     useEffect(() => {
         navigate("/home")
+        localStorage.setItem("currentLocation", "home")
+        //eslint-disable-next-line
     }, [])
 
     return (
@@ -16,46 +18,47 @@ const Menubar = () => {
         <SideNav
             className="p-left-menu"
             onSelect={(selected) => {
+                localStorage.setItem("currentLocation", selected)
                 navigate("/" + selected)
             }}
         >
             <SideNav.Toggle />
-            <SideNav.Nav defaultSelected="home">
-                <NavItem eventKey="home">
+            <SideNav.Nav>
+                <NavItem eventKey="home" active={(localStorage.getItem("currentLocation") === "home")}>
                     <NavIcon>
-                        <i className="pi pi-home" style={{ fontSize: '1.75em' }} />
+                        <i className="pi pi-home p-menu-item" />
                     </NavIcon>
                     <NavText>
                         Inicio
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="analyse">
+                <NavItem eventKey="analyse" active={(localStorage.getItem("currentLocation") === "analyse")}>
                     <NavIcon>
-                        <i className="pi pi-search" style={{ fontSize: '1.75em' }} />
+                        <i className="pi pi-search p-menu-item" />
                     </NavIcon>
                     <NavText>
                         Analizar
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="statistics">
+                <NavItem eventKey="statistics" active={(localStorage.getItem("currentLocation") === "statistics")}>
                     <NavIcon>
-                        <i className="pi pi-chart-line" style={{ fontSize: '1.75em' }} />
+                        <i className="pi pi-chart-line p-menu-item" />
                     </NavIcon>
                     <NavText>
                         Estadísticas
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="information">
+                <NavItem eventKey="information" active={(localStorage.getItem("currentLocation") === "information")}>
                     <NavIcon>
-                        <i className="pi pi-info-circle" style={{ fontSize: '1.75em' }} />
+                        <i className="pi pi-info-circle p-menu-item" />
                     </NavIcon>
                     <NavText>
                         Información
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="contact">
+                <NavItem eventKey="contact" active={(localStorage.getItem("currentLocation") === "contact")}>
                     <NavIcon>
-                        <i className="pi pi-user" style={{ fontSize: '1.75em' }} />
+                        <i className="pi pi-user p-menu-item" />
                     </NavIcon>
                     <NavText>
                         Contáctanos

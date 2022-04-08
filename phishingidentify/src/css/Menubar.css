@@ -2,3 +2,7 @@
     position: fixed !important;
     background-color: var(--blue-900) !important;
 }
+
+.p-menu-item {
+    font-size: 1.75em !important;
+}

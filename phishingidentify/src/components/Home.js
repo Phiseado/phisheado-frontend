@@ -13,13 +13,19 @@ const Home = () => {
             <div className="flex mt-7">
                 <Card className="mr-6 pb-4 p-container text-center p-card-home">
                     <img className="p-image" alt="analyse" src="analyse.png" height="100"></img>
-                    <div className="p-overlay" onClick={() => navigate("/analyse")}>
+                    <div className="p-overlay" onClick={() => {
+                        localStorage.setItem("currentLocation", "analyse")
+                        navigate("/analyse")
+                    }}>
                         <div className="p-text">Analizar</div>
                     </div>
                 </Card>
                 <Card className="mr-6 p-container text-center p-card-home">
                     <img className="p-image" alt="analyse" src="statistics.png" height="100"></img>
-                    <div className="p-overlay" onClick={() => navigate("/statistics")}>
+                    <div className="p-overlay" onClick={() => {
+                        localStorage.setItem("currentLocation", "statistics")
+                        navigate("/statistics")
+                    }}>
                         <div className="p-text">Estadísticas</div>
                     </div>
                 </Card>
