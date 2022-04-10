@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const backendUrl = 'http://127.0.0.1:8000/'
+const backendUrl = 'https://phishing-alert-backend.herokuapp.com/'
 
 async function apiPost(endpoint, body) {
     return await axios.post(`${backendUrl}${endpoint}`, body)
