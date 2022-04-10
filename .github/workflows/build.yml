@@ -6,12 +6,14 @@ on:
     branches: [ main ]
 
 jobs:
-  codacy-coverage-reporter:
+  deploy:
+    if: ${{github.ref == 'refs/heads/main'}}
+    name: Heroku
     runs-on: ubuntu-latest
-    name: codacy-coverage-reporter
     steps:
-      - uses: actions/checkout@v3
-      - name: Run codacy-coverage-reporter
-        uses: codacy/codacy-coverage-reporter-action@v1.3.0
+      - uses: actions/checkout@v2
+      - uses: akhileshNS/heroku-deploy@v3.12.12
         with:
-          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "phishing-alert-frontend"
+          heroku_email: "phishingidentify@gmail.com"
