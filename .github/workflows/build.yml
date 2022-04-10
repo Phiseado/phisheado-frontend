@@ -24,6 +24,7 @@ jobs:
         run: cd phishingidentify && npm run test:e2e
     
   deploy:
+    needs: build
     if: ${{github.ref == 'refs/heads/main'}}
     name: Heroku
     runs-on: ubuntu-latest
