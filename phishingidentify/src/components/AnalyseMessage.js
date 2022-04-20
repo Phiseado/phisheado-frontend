@@ -25,7 +25,7 @@ const AnalyseMessage = () => {
         }
 
         const timeout = setTimeout(() => {
-            msg.current.show({ severity: 'error', detail: 'El tiempo de respuesta ha excedido' })
+            msg.current.show({ severity: 'info', detail: 'El tiempo de respuesta ha excedido' })
             setIsLoading(false)
         }, 15000);
 
@@ -41,6 +41,18 @@ const AnalyseMessage = () => {
             clearTimeout(timeout)
             msg.current.show({ severity: 'error', detail: 'Error al analizar el mensaje' })
         }
+    }
+
+    const reportMessage = () => {
+        setCardResult(false)
+        // TODO: API call
+        msg.current.show({ severity: 'success', detail: 'Mensaje denunciado correctamente' })
+    }
+
+    const changeMessageState = () => {
+        setCardResult(false)
+        // TODO: API call
+        msg.current.show({ severity: 'success', detail: 'Respuesta guardada correctamente' })
     }
 
     return (
@@ -61,9 +73,15 @@ const AnalyseMessage = () => {
                             <span> El mensaje no es considerado como phishing </span> :
                             <span> ¡Cuidado! El mensaje podría ser phishing </span>
                         }
-                        <Button className="p-button-raised m-auto p-button-custom mt-3" label="Volver" icon="pi pi-arrow-circle-left" onClick={() => setCardResult(false)} />
+                        <div className="mt-5">
+                            <Button className="p-button-raised m-auto p-button-custom mr-3 p-button-report" label="Denunciar" icon="pi pi-exclamation-circle" onClick={reportMessage} />
+                            <Button className="p-button-raised m-auto p-button-custom mr-3 p-button-false" label="No es phishing" icon="pi pi-check-circle" onClick={changeMessageState} />
+                        </div>
                     </div>
                 </Panel>
+            }
+            {!cardResult ? "" :
+                <Button className="align-items-end p-button-raised m-auto p-button-custom mt-2" label="Volver" icon="pi pi-arrow-circle-left" onClick={() => setCardResult(false)} />
             }
         </div>
     )
