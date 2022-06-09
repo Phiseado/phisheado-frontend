@@ -10,6 +10,9 @@ describe("AnalyseMessage", () => {
             "https://google.com"
         );
         cy.get("button").last().click();
+        cy.get("div.p-dropdown-trigger").click();
+        cy.contains("Algeria").click();
+        cy.contains("Aceptar").click();
         cy.wait(6000);
         cy.get("div.p-panel-content").contains(
             "El mensaje no es considerado como phishing"
@@ -23,6 +26,9 @@ describe("AnalyseMessage", () => {
             "Se ha iniciado sesion desde un nuevo DlSPOSlTlVO, si no has sido tu verifica inmediatamente:https://bbva.usuario-esp.pw/"
         );
         cy.get("button").last().click();
+        cy.get("div.p-dropdown-trigger").click();
+        cy.contains("Algeria").click();
+        cy.contains("Aceptar").click();
         cy.wait(4000);
         cy.get("div.p-panel-content").contains(
             "¡Cuidado! El mensaje podría ser phishing"
@@ -33,6 +39,9 @@ describe("AnalyseMessage", () => {
     it("try analyse empty phishing message", () => {
         cy.get("i.pi.pi-search").click();
         cy.get("button").last().click();
+        cy.get("div.p-dropdown-trigger").click();
+        cy.contains("Algeria").click();
+        cy.contains("Aceptar").click();
         cy.get("div.p-message-wrapper").contains("El mensaje no debe estar vacío")
     })
 
@@ -55,6 +64,9 @@ describe("AnalyseMessage", () => {
             "Se ha iniciado sesion desde un nuevo DlSPOSlTlVO, si no has sido tu verifica inmediatamente:https://bbva.usuario-esp.pw/"
         );
         cy.get("button").last().click();
+        cy.get("div.p-dropdown-trigger").click();
+        cy.contains("Algeria").click();
+        cy.contains("Aceptar").click();
         cy.wait(4000);
         cy.get("div.p-panel-content").contains(
             "¡Cuidado! El mensaje podría ser phishing"
@@ -69,10 +81,12 @@ describe("AnalyseMessage", () => {
             "https://google.com"
         );
         cy.get("button").last().click();
+        cy.get("div.p-dropdown-trigger").click();
+        cy.contains("Algeria").click();
+        cy.contains("Aceptar").click();
         cy.wait(6000);
         cy.get("div.p-panel-content").contains(
             "El mensaje no es considerado como phishing"
         );
-        cy.get("button.p-button-report").click();
     })
 })
