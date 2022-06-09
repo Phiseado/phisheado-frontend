@@ -10,3 +10,8 @@ export async function analyseMessage(message) {
     let response = await apiPost('check/', message)
     return response.data
 }
+
+export async function reportMessage(body) {
+    let response = await apiPost('report-message/', body)
+    return response.data
+}

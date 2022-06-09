@@ -25,3 +25,15 @@
   background-color: var(--blue-700) !important;
   border-color: var(--blue-700) !important;
 }
+
+.p-button-report {
+  color: black !important;
+  border-color: rgb(253, 130, 130) !important;
+  background-color: rgb(250, 190, 190) !important;
+}
+
+.p-button-false {
+  color: black !important;
+  border-color: rgb(64, 182, 64) !important;
+  background-color: rgb(183, 241, 183) !important;
+}
