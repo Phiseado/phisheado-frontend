@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const backendUrl = 'https://phishing-alert-backend.herokuapp.com/'
+const backendUrl = 'http://localhost:8000/'
 
 async function apiPost(endpoint, body) {
     return await axios.post(`${backendUrl}${endpoint}`, body)
@@ -22,5 +22,10 @@ export async function reportMessage(body) {
 
 export async function getDomains() {
     let response = await apiGet('domains/')
+    return response.data
+}
+
+export async function getPieChart() {
+    let response = await apiGet('pie-chart/')
     return response.data
 }
