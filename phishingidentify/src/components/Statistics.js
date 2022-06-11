@@ -4,11 +4,9 @@ import { Panel } from 'primereact/panel';
 import { DataScroller } from 'primereact/datascroller';
 import { Button } from 'primereact/button';
 import "../css/Statistics.css";
-import { getDomains, getPieChart } from '../api/api';
+import { getDomains, getPieChart, getBarChart } from '../api/api';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
-import { PieChart } from 'react-minimal-pie-chart';
-import { ColorPicker } from 'primereact/colorpicker';
-
+import { Chart } from 'primereact/chart';
 
 const UrlCard = (data) => {
     return (
@@ -25,21 +23,38 @@ const Statistics = () => {
     const datascroller = useRef(null);
     const [domains, setDomains] = useState([]);
     const [pieChart, setPieChart] = useState([]);
-    const shiftSize = 7;
+    const [barChart, setBarChart] = useState([]);
     const footer = <Button className="p-button-custom mb-3" type="text" icon="pi pi-plus" label="Cargar" onClick={() => datascroller.current.load()} />
-    const defaultLabelStyle = {
-        fontSize: '8px',
-    }
 
     useEffect(() => {
         getDomains().then(data => {
             setDomains(data);
         })
         getPieChart().then(data => {
-            setPieChart([
-                { title: 'Phishing', value: data.phishing, color: '#80d8ff' },
-                { title: 'No Phishing', value: data.non_phishing, color: '#ff99c6' }
-            ]);
+            let phishingPercentage = data.phishing / (data.phishing + data.non_phishing) * 100;
+            let nonPhishingPercentage = data.non_phishing / (data.phishing + data.non_phishing) * 100;
+            setPieChart({
+                labels: ['% de casos reales de phishing', '% de casos falsos de phishing'],
+                datasets: [
+                    {
+                        data: [phishingPercentage, nonPhishingPercentage],
+                        backgroundColor: ['#80d8ff', '#ff99c6'],
+                        hoverBackgroundColor: ['#80d8ff', '#ff99c6'],
+                    }
+                ]
+            })
+        })
+        getBarChart().then(data => {
+            setBarChart({
+                labels: data.map(item => item.country__name),
+                datasets: [
+                    {
+                        label: 'Casos de phishing reportados',
+                        backgroundColor: '#ffab80 ',
+                        data: data.map(item => item.total)
+                    }
+                ]
+            })
         })
     }, []);
 
@@ -54,26 +69,18 @@ const Statistics = () => {
                 </Panel>
             </SplitterPanel>
             <SplitterPanel className="flex flex-column align-items-center justify-content-center">
-                <div className='text-center h-30rem'>
-                    <span className='text-2xl font-bold'>Gráfico de casos detectados reales</span>
-                    <div className='flex mt-4'>
-                        <div><ColorPicker disabled value="#80d8ff" /> Phishing detectado correctamente</div>
-                        <div className='ml-3'><ColorPicker disabled value="#ff99c6" /> Falsos casos de phishing</div>
+                <Panel header="Estadísticas" className="p-panel-urllist px-3 pt-3">
+                    <div className='text-center mt-5 mb-7'>
+                        <span className='text-2xl font-bold'>Ranking de países según casos de phishing detectados</span>
+                        <Chart className="m-auto" type="bar" data={barChart} style={{ width: '60%' }} />
                     </div>
-                    <PieChart data={pieChart}
-                        radius={PieChart.defaultProps.radius - shiftSize}
-                        segmentsShift={(index) => (index === 0 ? shiftSize : 0.5)}
-                        label={({ dataEntry }) => Math.round(dataEntry.percentage) + '%'}
-                        labelStyle={{
-                            ...defaultLabelStyle,
-                        }}
-                        animate
-                    />
-                </div>
+                    <div className='text-center'>
+                        <span className='text-2xl font-bold'>Gráfico de casos detectados reales</span>
+                        <Chart className="m-auto" type="pie" data={pieChart} style={{ width: '40%' }} />
+                    </div>
+                </Panel>
             </SplitterPanel>
         </Splitter >
-
-
     )
 }
 
