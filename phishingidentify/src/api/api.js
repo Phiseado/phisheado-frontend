@@ -24,3 +24,13 @@ export async function getDomains() {
     let response = await apiGet('domains/')
     return response.data
 }
+
+export async function getPieChart() {
+    let response = await apiGet('pie-chart/')
+    return response.data
+}
+
+export async function getBarChart() {
+    let response = await apiGet('bar-chart/')
+    return response.data
+}
