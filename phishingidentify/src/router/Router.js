@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import AnalyseMessage from "../components/AnalyseMessage";
 import Home from "../components/Home";
 import Statistics from "../components/Statistics";
+import AboutUs from "../components/AboutUs";
 
 const Router = () => (
     <Routes>
@@ -18,6 +19,11 @@ const Router = () => (
         <Route
             path="/statistics"
             element={<Statistics />}
+        >
+        </Route>
+        <Route
+            path="/contact"
+            element={<AboutUs />}
         >
         </Route>
         <Route

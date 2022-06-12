@@ -37,7 +37,10 @@ const Home = () => {
                 </Card>
                 <Card className="mr-6 mb-4 p-container text-center p-card-home">
                     <img className="p-image" alt="analyse" src="contact.png" height="100"></img>
-                    <div className="p-overlay">
+                    <div className="p-overlay" onClick={() => {
+                        localStorage.setItem("currentLocation", "contact")
+                        navigate("/contact")
+                    }}>
                         <div className="p-text">Conócenos</div>
                     </div>
                 </Card>
