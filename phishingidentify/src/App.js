@@ -9,8 +9,8 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       reTrainUrlModel()
-      // once a month the url model will be retrained
-    }, 2629800000);
+      // once every 20 days the url model will be retrained
+    }, parseInt(20 * 24 * 60 * 60 * 1000));
     return () => clearInterval(interval);
   }, []);
 
