@@ -2,7 +2,7 @@ describe("AnalyseMessage", () => {
 
     beforeEach(() => {
         cy.initialOpen();
-    })
+    });
 
     it("analyse normal message", () => {
         cy.get("i.pi.pi-search").click();
