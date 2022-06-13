@@ -48,14 +48,6 @@ const Menubar = () => {
                         Estadísticas
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="information" active={(localStorage.getItem("currentLocation") === "information")}>
-                    <NavIcon>
-                        <i className="pi pi-info-circle p-menu-item" />
-                    </NavIcon>
-                    <NavText>
-                        Información
-                    </NavText>
-                </NavItem>
                 <NavItem eventKey="contact" active={(localStorage.getItem("currentLocation") === "contact")}>
                     <NavIcon>
                         <i className="pi pi-user p-menu-item" />
