@@ -48,6 +48,7 @@
 }
 
 .p-eslogan {
+  text-decoration: line-through;
   animation: textDecoration 5s;
 }
 
@@ -59,6 +60,7 @@
     text-decoration: line-through;
   }
 }
+
 @media screen and (max-width: 960px) {
   .p-card-container {
     display: flex;

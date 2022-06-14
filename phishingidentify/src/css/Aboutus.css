@@ -1,19 +1,39 @@
+.p-card-maribel {
+  margin-right: 2rem;
+}
+
+.p-card-javi {
+  margin-left: 0 !important;
+}
+
+.customfadeinright {
+  animation-name: fadeinright;
+}
+
+.customfadeinleft {
+  animation-name: fadeinleft;
+}
+
+.p-image-arco {
+  clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.p-image-us {
+  clip-path: polygon(0 0, 92% 0, 100% 100%, 0% 100%);
+}
+
 @media screen and (max-width: 960px) {
   .p-photos {
     flex-direction: column !important;
   }
+
   .p-card-maribel,
   .p-card-javi {
     margin: auto;
   }
-}
 
-@media screen and (min-width: 960px) {
-  .p-card-maribel {
-    margin-right: 2rem;
-  }
-
-  .p-card-javi {
-    margin-left: 0 !important;
+  .p-image-arco,
+  .p-image-us {
+    clip-path: none;
   }
 }
