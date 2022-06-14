@@ -72,11 +72,11 @@ const Statistics = () => {
                 <Panel header="Estadísticas" className="p-panel-urllist px-3 pt-3">
                     <div className='text-center mt-5 mb-7'>
                         <span className='text-2xl font-bold'>Ranking de países según casos de phishing detectados</span>
-                        <Chart className="m-auto" type="bar" data={barChart} style={{ width: '60%' }} />
+                        <Chart className="m-auto" type="bar" data={barChart} />
                     </div>
                     <div className='text-center'>
                         <span className='text-2xl font-bold'>Gráfico de casos detectados reales</span>
-                        <Chart className="m-auto" type="pie" data={pieChart} style={{ width: '40%' }} />
+                        <Chart className="p-piechart m-auto" type="pie" data={pieChart} />
                     </div>
                 </Panel>
             </SplitterPanel>

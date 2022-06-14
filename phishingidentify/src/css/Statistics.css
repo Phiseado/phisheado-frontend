@@ -36,6 +36,10 @@
   border: none !important;
 }
 
+.p-piechart {
+  width: 40% !important;
+}
+
 @media screen and (max-width: 960px) {
   .p-c-splitter {
     display: flex;
@@ -44,5 +48,9 @@
 
   .p-splitter-horizontal {
     @extend .p-splitter-vertical;
+  }
+
+  .p-piechart {
+    width: 100% !important;
   }
 }

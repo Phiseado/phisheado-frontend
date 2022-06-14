@@ -47,6 +47,20 @@
   text-align: center;
 }
 
+.p-eslogan {
+  text-decoration: line-through;
+  animation: textDecoration 5s;
+}
+
+@keyframes textDecoration {
+  0% {
+    text-decoration: none;
+  }
+  100% {
+    text-decoration: line-through;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .p-card-container {
     display: flex;

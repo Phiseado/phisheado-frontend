@@ -94,8 +94,8 @@ const AnalyseMessage = () => {
 
     return (
         <div className="flex flex-column align-items-center mt-5">
-            <Dialog header="Selecciona tu país" visible={countryDialog} style={{ width: '20vw' }} footer={renderFooter} onHide={() => setCountryDialog(false)}>
-                <Dropdown className="w-full" value={country} options={countries} onChange={(value) => setCountry(value)} placeholder={country.value} filter={true} />
+            <Dialog header="Selecciona tu país" visible={countryDialog} footer={renderFooter} onHide={() => setCountryDialog(false)}>
+                <Dropdown className="w-full h-3rem" value={country} options={countries} onChange={(value) => setCountry(value)} placeholder={country.value} filter={true} />
             </Dialog>
             <Messages ref={msg}></Messages>
             <img className="p-image" alt="analyse" src="analyse.png" height="200"></img>
