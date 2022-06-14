@@ -6,10 +6,10 @@ import "../css/Aboutus.css";
 
 const AboutUs = () => {
     return (
-        <div className='p-4'>
-            <AnimationOnScroll animateIn="animate__bounceInLeft ">
-                <div className="grid grid-nogutter surface-0 text-800">
-                    <div className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+        <div>
+            <AnimationOnScroll animateIn="animate__bounceInLeft">
+                <div className="grid grid-nogutter surface-0 text-800 mt-4">
+                    <div className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center">
                         <section>
                             <div className="text-6xl text-primary font-bold mb-3">Nuestro objetivo</div>
                             <p className="mt-0 mb-4 text-700 line-height-3">
@@ -27,22 +27,22 @@ const AboutUs = () => {
                         </section>
                     </div>
                     <div className="col-12 md:col-6 overflow-hidden">
-                        <img src="arco.jpeg" alt="hero-1" className="md:ml-auto block md:h-full" style={{ clipPath: 'polygon(8% 0, 100% 0%, 100% 100%, 0 100%)' }} />
+                        <Image src="arco.jpeg" alt="hero-1" className="md:ml-auto block md:h-full" style={{ clipPath: 'polygon(8% 0, 100% 0%, 100% 100%, 0 100%)' }} />
                     </div>
                 </div>
             </AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__bounceInRight ">
-                <div className="grid grid-nogutter surface-0 text-800 mt-8">
+                <div className="grid grid-nogutter surface-0 text-800 mt-4">
                     <div className="col-12 md:col-6 overflow-hidden">
-                        <img src="us.jpeg" alt="hero-1" className="md:ml-auto block md:h-full" style={{ clipPath: 'polygon(0 0, 92% 0, 100% 100%, 0% 100%)' }} />
+                        <Image src="us.jpeg" alt="hero-1" className="md:ml-auto block md:h-full" style={{ clipPath: 'polygon(0 0, 92% 0, 100% 100%, 0% 100%)' }} />
                     </div>
-                    <div className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+                    <div className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center">
                         <section>
                             <div className="text-6xl text-primary font-bold mb-3">Nuestra historia</div>
                             <p className="mt-0 mb-4 text-700 line-height-3">
                                 Somos dos estudiantes de la Universidad de Sevilla, cursando el último año del grado de Ingeniería Informática - Ingeniería del Software.
                                 Gracias a nuestro espíritu autodidacta y gran interés en el ámbito de la Inteligencia Artificial y la seguridad informática, decidimos
-                                realizar un Trabajo Fin de Grado que mantuviese relación con ambas temáticas. De esta forma surgió Phishing Alert, "insertar eslogan".
+                                realizar un Trabajo Fin de Grado que mantuviese relación con ambas temáticas. De esta forma surgió Phisheado; tu phishing, eliminado.
                             </p>
                         </section>
                     </div>
@@ -50,8 +50,8 @@ const AboutUs = () => {
             </AnimationOnScroll>
             <div className='text-center mt-8'>
                 <div className="text-6xl text-primary font-bold mb-3">¿Quiénes somos?</div>
-                <div className='p-photos flex justify-content-center'>
-                    <Card title="María Isabel Ramos" className="mr-4" style={{ width: '25rem', marginBottom: '2em' }}>
+                <div className='p-photos flex justify-content-center text-center'>
+                    <Card title="María Isabel Ramos" className="p-card-maribel mb-4" style={{ width: '25rem', marginBottom: '2em' }}>
                         <Image src="Maribel.jpeg" alt="Image" width="250" />
                         <p className="m-0 mt-3" style={{ lineHeight: '1.5' }}>
                             ¡Accede a mi perfil de Github! <br></br>
@@ -59,7 +59,7 @@ const AboutUs = () => {
                             <a className="ml-2" href='https://github.com/maribelrb22' style={{ color: '#000000', textDecoration: 'none' }}>github.com/maribelrb22</a>
                         </p>
                     </Card>
-                    <Card title="Javier Vilariño" style={{ width: '25rem', marginBottom: '2em' }}>
+                    <Card title="Javier Vilariño" className="p-card-javi mb-4" style={{ width: '25rem', marginBottom: '2em' }}>
                         <Image src="Javi.jpeg" alt="Image" width="250" />
                         <p className="m-0 mt-3" style={{ lineHeight: '1.5' }}>
                             ¡Accede a mi perfil de Github! <br></br>

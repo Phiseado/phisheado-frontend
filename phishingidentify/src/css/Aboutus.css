@@ -2,4 +2,18 @@
   .p-photos {
     flex-direction: column !important;
   }
+  .p-card-maribel,
+  .p-card-javi {
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .p-card-maribel {
+    margin-right: 2rem;
+  }
+
+  .p-card-javi {
+    margin-left: 0 !important;
+  }
 }
