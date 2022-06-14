@@ -6,12 +6,12 @@ const Home = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="flex flex-column align-items-center mt-8">
+        <div className="flex flex-column align-items-center mt-5 w-full">
             <img className="p-logo-app" alt="logo" src="phishing-logo.png" height="300"></img>
-            <span className="text-5xl mt-4">Phishing alert</span>
+            <span className="text-4xl mt-4">Phishing alert</span>
             <span>"Insertar eslogan"</span>
-            <div className="flex mt-7">
-                <Card className="mr-6 mb-4 p-container text-center p-card-home">
+            <div className="flex p-card-container mt-7 text-center">
+                <Card className="mb-5 mr-3 ml-3 p-container text-center p-card-home m-auto">
                     <img className="p-image" alt="analyse" src="analyse.png" height="100"></img>
                     <div className="p-overlay" onClick={() => {
                         localStorage.setItem("currentLocation", "analyse")
@@ -20,7 +20,7 @@ const Home = () => {
                         <div className="p-text">Analizar</div>
                     </div>
                 </Card>
-                <Card className="mr-6 mb-4 p-container text-center p-card-home">
+                <Card className="mb-5 mr-3 ml-3 p-container text-center p-card-home m-auto">
                     <img className="p-image" alt="analyse" src="statistics.png" height="100"></img>
                     <div className="p-overlay" onClick={() => {
                         localStorage.setItem("currentLocation", "statistics")
@@ -29,7 +29,7 @@ const Home = () => {
                         <div className="p-text">Estadísticas</div>
                     </div>
                 </Card>
-                <Card className="mr-6 mb-4 p-container text-center p-card-home">
+                <Card className="mb-5 mr-3 ml-3 p-container text-center p-card-home m-auto">
                     <img className="p-image" alt="analyse" src="contact.png" height="100"></img>
                     <div className="p-overlay" onClick={() => {
                         localStorage.setItem("currentLocation", "contact")

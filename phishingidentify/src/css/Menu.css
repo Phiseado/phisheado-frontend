@@ -1,0 +1,30 @@
+.p-menubar {
+  background-color: var(--blue-900) !important;
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+.p-menubar-button {
+  color: white !important;
+}
+
+.p-menubar-button:hover {
+  background-color: var(--blue-800) !important;
+}
+
+.p-menubar-root-list {
+  background-color: var(--blue-900) !important;
+  margin: auto !important;
+}
+
+.p-menuitem-icon {
+  color: white !important;
+}
+
+.p-menuitem-link:hover {
+  background-color: var(--blue-800) !important;
+}
+
+.p-menuitem-text {
+  color: white !important;
+}

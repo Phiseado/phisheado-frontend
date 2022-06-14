@@ -46,3 +46,10 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+@media screen and (max-width: 960px) {
+  .p-card-container {
+    display: flex;
+    flex-direction: column !important;
+  }
+}

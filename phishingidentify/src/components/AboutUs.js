@@ -2,6 +2,7 @@ import { Card } from 'primereact/card';
 import { Image } from 'primereact/image';
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import "../css/Aboutus.css";
 
 const AboutUs = () => {
     return (
@@ -49,7 +50,7 @@ const AboutUs = () => {
             </AnimationOnScroll>
             <div className='text-center mt-8'>
                 <div className="text-6xl text-primary font-bold mb-3">¿Quiénes somos?</div>
-                <div className='flex justify-content-center'>
+                <div className='p-photos flex justify-content-center'>
                     <Card title="María Isabel Ramos" className="mr-4" style={{ width: '25rem', marginBottom: '2em' }}>
                         <Image src="Maribel.jpeg" alt="Image" width="250" />
                         <p className="m-0 mt-3" style={{ lineHeight: '1.5' }}>

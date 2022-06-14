@@ -103,7 +103,7 @@ const AnalyseMessage = () => {
             {!cardResult ?
                 <Panel header="Inserte un texto con URL para analizar" className="px-3 mt-7">
                     <div className="flex flex-column">
-                        <InputTextarea className="mb-3" value={incomingMessage} onChange={(e) => setIncomingMessage(e.target.value)} rows={7} cols={110} />
+                        <InputTextarea className="p-inputtext mb-3" value={incomingMessage} onChange={(e) => setIncomingMessage(e.target.value)} />
                         {isLoading ? < ProgressSpinner /> : <Button className="p-button-raised m-auto p-button-custom" label="Analizar" icon="pi pi-search" onClick={selectCountry} />}
                     </div>
                 </Panel> :
