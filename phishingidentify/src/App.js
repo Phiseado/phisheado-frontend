@@ -1,5 +1,5 @@
 import './css/App.css';
-import Menubar from './components/Menubar';
+import Menu from './components/Menu';
 import Router from "./router/Router";
 import { useEffect } from 'react';
 import { reTrainUrlModel } from './api/api';
@@ -16,10 +16,8 @@ function App() {
 
   return (
     <div className='App'>
-      <Menubar />
-      <div className="p-distance">
-        <Router />
-      </div>
+      <Menu />
+      <Router />
     </div>
   );
 }

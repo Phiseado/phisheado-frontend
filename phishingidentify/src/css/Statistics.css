@@ -1,6 +1,7 @@
 .p-c-splitter {
   height: 100vh;
   overflow-y: auto;
+  border: none !important;
 }
 
 .p-panel-urllist {
@@ -33,4 +34,15 @@
 .p-datascroller-footer {
   background-color: #fff !important;
   border: none !important;
+}
+
+@media screen and (max-width: 960px) {
+  .p-c-splitter {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .p-splitter-horizontal {
+    @extend .p-splitter-vertical;
+  }
 }

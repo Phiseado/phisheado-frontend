@@ -61,7 +61,7 @@ const Statistics = () => {
     return (
         <Splitter className="p-c-splitter">
             <SplitterPanel className="flex align-items-center justify-content-center">
-                <Panel header="URL's consideradas como phishing" className="p-panel-urllist px-3 pt-3">
+                <Panel header="URL's consideradas como phishing" style={{ height: "100vh" }} className="p-panel-urllist px-3 pt-3">
                     <div className="card">
                         <DataScroller ref={datascroller} value={domains} itemTemplate={UrlCard} rows={3}
                             loader footer={footer} />
