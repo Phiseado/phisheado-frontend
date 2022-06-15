@@ -111,11 +111,15 @@ const AnalyseMessage = () => {
                     <div className="flex flex-column text-center">
                         {!analyseResult ?
                             <span> El mensaje no es considerado como phishing </span> :
-                            <div>
+                            <div className='text-center'>
                                 <span> ¡Cuidado! El mensaje podría ser phishing </span>
-                                <div className="mt-5">
-                                    <Button className="p-button-raised m-auto p-button-custom mr-3 p-button-report" label="Denunciar" icon="pi pi-exclamation-circle" onClick={reportIncomingMessage} />
-                                    <Button className="p-button-raised m-auto p-button-custom mr-3 p-button-false" label="No es phishing" icon="pi pi-check-circle" onClick={changeMessageState} />
+                                <div className="grid w-full mt-5 m-auto text-center">
+                                    <div className="col-12 md:col-4 ml-auto">
+                                        <Button className="p-button-raised p-button-custom p-button-report w-full h-full" label="Denunciar" icon="pi pi-exclamation-circle" onClick={reportIncomingMessage} />
+                                    </div>
+                                    <div className="col-12 md:col-4 mr-auto">
+                                        <Button className="p-button-raised p-button-custom p-button-false w-full h-full" label="No es phishing" icon="pi pi-check-circle" onClick={changeMessageState} />
+                                    </div>
                                 </div>
                             </div>
                         }
