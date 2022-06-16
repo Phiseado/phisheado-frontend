@@ -53,6 +53,10 @@ const AboutUs = () => {
                             <i class="pi pi-github"></i>
                             <a className="ml-2" href='https://github.com/maribelrb22' style={{ color: '#000000', textDecoration: 'none' }}>github.com/maribelrb22</a>
                         </p>
+                        <p>
+                            <i class="pi pi-envelope"></i>
+                            <a style={{ textDecoration: "none" }} className="ml-2" href='mailto:phishingidentify@gmail.com'>phishingidentify@gmail.com</a>
+                        </p>
                     </Card>
                     <Card title="Javier Vilariño" className="p-card-javi mb-4" style={{ width: '25rem', marginBottom: '2em' }}>
                         <Image src="Javi.jpeg" alt="Image" width="250" />
@@ -60,6 +64,10 @@ const AboutUs = () => {
                             ¡Accede a mi perfil de Github! <br></br>
                             <i class="pi pi-github"></i>
                             <a className="ml-2" href='https://github.com/javivm17' style={{ color: '#000000', textDecoration: 'none' }}>github.com/javivm17</a>
+                        </p>
+                        <p>
+                            <i class="pi pi-envelope"></i>
+                            <a style={{ textDecoration: "none" }} className="ml-2" href='mailto:phishingidentify@gmail.com'>phishingidentify@gmail.com</a>
                         </p>
                     </Card>
                 </div>
