@@ -21,7 +21,7 @@ function App() {
   const hour = newdate.getHours()
 
   return (
-    (hour < 2 || hour > 8 ?
+    (hour < 2 || hour > 7 ?
       <div className='App'>
         <Menu />
         <Router />
