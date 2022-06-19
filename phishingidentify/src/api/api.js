@@ -34,8 +34,3 @@ export async function getBarChart() {
     let response = await apiGet('bar-chart/')
     return response.data
 }
-
-export async function reTrainUrlModel() {
-    let response = await apiPost('retrain-url-model/', {})
-    return response.data
-}
