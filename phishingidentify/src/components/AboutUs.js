@@ -13,7 +13,7 @@ const AboutUs = () => {
                         <p className="mt-0 mb-4 text-700 line-height-3">
                             Debido a que el uso de Internet se ha visto incrementado desde sus inicios de forma exponencial,
                             existen ahora más usuarios vulnerables a posibles ataques informáticos.
-                            Una de los amenazas más conocidas a nivel mundial es el <b>phishing</b>,
+                            Una de las amenazas más conocidas a nivel mundial es el <b>phishing</b>,
                             una técnica usada por ciberdelicuentes para obtener datos personales de un individuo, como su número de cuenta bancaria.
                             Este método de estafa está tan presente en la actualidad que es extraño encontrar a una persona que no haya recibido en
                             algún momento un mensaje con este propósito maligno.
