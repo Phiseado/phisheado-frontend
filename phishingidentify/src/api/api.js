@@ -30,7 +30,7 @@ export async function getPieChart() {
     return response.data
 }
 
-export async function getBarChart() {
-    let response = await apiGet('bar-chart/')
+export async function getBarChart(filter) {
+    let response = await apiPost('bar-chart/', filter)
     return response.data
 }

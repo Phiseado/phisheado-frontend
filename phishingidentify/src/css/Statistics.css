@@ -40,6 +40,16 @@
   width: 40% !important;
 }
 
+.p-dropdown-label {
+  text-align: left !important;
+  color: #b2b5b9 !important;
+}
+
+.p-autocomplete-input {
+  height: 3rem !important;
+  width: 100% !important;
+}
+
 @media screen and (max-width: 960px) {
   .p-c-splitter {
     display: flex;
