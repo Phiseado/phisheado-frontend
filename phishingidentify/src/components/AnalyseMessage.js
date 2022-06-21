@@ -15,6 +15,7 @@ const AnalyseMessage = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [cardResult, setCardResult] = useState(false)
     const [analyseResult, setAnalyseResult] = useState("")
+    const [reasonResult, setReasonResult] = useState("")
     const msg = useRef(null);
     const [countryDialog, setCountryDialog] = useState(false)
     const [country, setCountry] = useState("")
@@ -49,6 +50,7 @@ const AnalyseMessage = () => {
                 clearTimeout(timeout)
                 setCardResult(true)
                 setAnalyseResult(response.result)
+                setReasonResult(response.reason)
             }
             catch (error) {
                 setIsLoading(false)
@@ -84,6 +86,16 @@ const AnalyseMessage = () => {
         }
     }
 
+    const discoverReason = () => {
+        if (reasonResult === "Google API") {
+            return "La URL está contenida en la lista negra de URL's maliciosas de Google."
+        } else if (reasonResult === "URL model") {
+            return "Se ha detectado a través de un modelo de Inteligencia Artificial basado en URL's."
+        } else {
+            return "Se ha detectado a través de un modelo de Inteligencia Artificial basado en el contenido del mensaje."
+        }
+    }
+
     const renderFooter = () => {
         return (
             <div className='text-center'>
@@ -112,7 +124,7 @@ const AnalyseMessage = () => {
                         {!analyseResult ?
                             <span> El mensaje no es considerado como phishing </span> :
                             <div className='text-center'>
-                                <span> ¡Cuidado! El mensaje podría ser phishing </span>
+                                <span> ¡Cuidado! El mensaje podría ser phishing. {discoverReason()} </span>
                                 <div className="grid w-full mt-5 m-auto text-center">
                                     <div className="col-12 md:col-4 ml-auto">
                                         <Button className="p-button-raised p-button-custom p-button-report w-full h-full" label="Denunciar" icon="pi pi-exclamation-circle" onClick={reportIncomingMessage} />
