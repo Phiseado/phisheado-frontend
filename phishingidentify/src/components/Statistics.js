@@ -115,7 +115,7 @@ const Statistics = () => {
                     <div className='text-center mb-6'>
                         <div className='flex flex-column'>
                             <span className='text-2xl font-bold'>Ranking de países según casos de phishing detectados</span>
-                            <Dropdown className="h-3rem mt-4 mb-4 text-align-left" value={selectedFilter} options={filteringOptions} onChange={onFilterChange} optionLabel="name" placeholder="Selecciona un filtro" />
+                            <Dropdown className="h-3rem mt-4 mb-4 text-align-left" value={selectedFilter} options={filteringOptions} onChange={onFilterChange} optionLabel="name" placeholder="Este mes" />
                             <Chart className="m-auto" type="bar" data={barChart} />
                         </div>
                     </div>
