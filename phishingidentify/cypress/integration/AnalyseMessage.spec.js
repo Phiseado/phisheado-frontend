@@ -5,7 +5,7 @@ describe("AnalyseMessage", () => {
     });
 
     it("analyse normal message", () => {
-        cy.get("i.pi.pi-search").click();
+        cy.get("a.p-menuitem-link").eq(1).click();
         cy.get("textarea.p-inputtextarea").type(
             "https://google.com"
         );
@@ -21,7 +21,7 @@ describe("AnalyseMessage", () => {
     })
 
     it("analyse phishing message", () => {
-        cy.get("i.pi.pi-search").click();
+        cy.get("a.p-menuitem-link").eq(1).click();
         cy.get("textarea.p-inputtextarea").type(
             "Se ha iniciado sesion desde un nuevo DlSPOSlTlVO, si no has sido tu verifica inmediatamente:https://bbva.usuario-esp.pw/"
         );
@@ -37,7 +37,7 @@ describe("AnalyseMessage", () => {
     })
 
     it("try analyse empty phishing message", () => {
-        cy.get("i.pi.pi-search").click();
+        cy.get("a.p-menuitem-link").eq(1).click();
         cy.get("button").last().click();
         cy.get("div.p-dropdown-trigger").click();
         cy.contains("Algeria").click();
@@ -59,7 +59,7 @@ describe("AnalyseMessage", () => {
     */
 
     it("report phishing message successfully", () => {
-        cy.get("i.pi.pi-search").click();
+        cy.get("a.p-menuitem-link").eq(1).click();
         cy.get("textarea.p-inputtextarea").type(
             "Se ha iniciado sesion desde un nuevo DlSPOSlTlVO, si no has sido tu verifica inmediatamente:https://bbva.usuario-esp.pw/"
         );
@@ -76,7 +76,7 @@ describe("AnalyseMessage", () => {
     })
 
     it("report not phishing message successfully", () => {
-        cy.get("i.pi.pi-search").click();
+        cy.get("a.p-menuitem-link").eq(1).click();
         cy.get("textarea.p-inputtextarea").type(
             "https://google.com"
         );

@@ -22,7 +22,6 @@ const Home = () => {
                 <Card className="mb-5 mr-4 ml-4 p-container text-center p-card-home m-auto">
                     <img className="p-image" alt="analyse" src="analyse.png" height="100"></img>
                     <div className="p-overlay" onClick={() => {
-                        localStorage.setItem("currentLocation", "analyse")
                         navigate("/analyse")
                     }}>
                         <div className="p-text">Analizar</div>
@@ -31,7 +30,6 @@ const Home = () => {
                 <Card className="mb-5 mr-4 ml-4 p-container text-center p-card-home m-auto">
                     <img className="p-image" alt="analyse" src="statistics.png" height="100"></img>
                     <div className="p-overlay" onClick={() => {
-                        localStorage.setItem("currentLocation", "statistics")
                         navigate("/statistics")
                     }}>
                         <div className="p-text">Estadísticas</div>
@@ -40,7 +38,6 @@ const Home = () => {
                 <Card className="mb-5 mr-4 ml-4 p-container text-center p-card-home m-auto">
                     <img className="p-image" alt="analyse" src="contact.png" height="100"></img>
                     <div className="p-overlay" onClick={() => {
-                        localStorage.setItem("currentLocation", "contact")
                         navigate("/contact")
                     }}>
                         <div className="p-text">Conócenos</div>
