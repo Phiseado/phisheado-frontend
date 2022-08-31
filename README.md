@@ -1,6 +1,6 @@
 Phisheado. Tu phishing eliminado.
 
-Phishing detection system using Artificial Intelligence. Final thesis by María Isabel Ramos Blanco and Javier Vilariño Mayo.
+Phishing detection system using Artificial Intelligence. TFG by María Isabel Ramos Blanco and Javier Vilariño Mayo.
 
 ## Deployment
 
@@ -19,14 +19,6 @@ There are different ways to initialize the application. Let's see them!
 
 ```sh
             npm start
-```
-
-### Run with Docker
-
-This project can be built as a docker image. Just open a console and type:
-
-```sh
-docker-compose up
 ```
 
 ### To access with Heroku
